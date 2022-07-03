@@ -29,13 +29,14 @@ function Text({ children, size = 1, left, right, top, bottom, color = "white", o
   return (
     <group {...props} scale={[size, size, 0.1]}>
       <mesh geometry={geom} onUpdate={onUpdate} frustumCulled={false}>
-        <customMaterial ref={ref} color={color} transparent opacity={opacity} />
+      <customMaterial ref={ref} color={color} transparent opacity={opacity} />
       </mesh>
     </group>
   )
 }
 
 const MultilineText = ({ text, size = 1, lineHeight = 1, position = [0, 0, 0], ...props }) =>
-  text.split("\n").map((text, index) => <Text key={index} size={size} {...props} position={[position[0], position[1] - index * lineHeight, position[2]]} children={text} />)
+text.split("\n").map((text, index) => <Text key={index} size={size} {...props} position={[position[0], position[1] - index * lineHeight, position[2]]} children={text} />)
+
 
 export { Text, MultilineText }
