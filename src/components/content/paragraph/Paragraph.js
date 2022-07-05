@@ -20,8 +20,8 @@ const Paragraph = ({ hideImage, image, index, offset, factor, header, aspect, su
         {hideImage ? (
           <>
             <Html
-              style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: left ? "left" : "right" }}
-              position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4 + ((w * size) / aspect / 1.07 + 0.5), 1]}>
+              style={{ width: pixelWidth / (mobile ? 1 : 1.5), textAlign: left ? "left" : "right" }}
+              position={[left || mobile ? (-w * size) / 2 : (-w * size) / 6, (-w * size) / 2 / aspect - 0.4 + ((w * size) / aspect / 1.07 + 0.5), 1]}>
               {subParagraphs.map((paragraph, i) => (
                 <div key={i} tabIndex={index} style={{ margin: "0 0 1.5rem 0" }}>
                   {paragraph}
@@ -33,8 +33,8 @@ const Paragraph = ({ hideImage, image, index, offset, factor, header, aspect, su
           <>
             <Plane map={image} args={[1, 1, 32, 32]} shift={75} size={size} aspect={aspect} scale={[w * size, (w * size) / aspect, 1]} frustumCulled={false} />
             <Html
-              style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: left ? "left" : "right" }}
-              position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4, 1]}>
+              style={{ width: pixelWidth / (mobile ? 1 : 1.5), textAlign: left ? "left" : "right" }}
+              position={[left || mobile ? (-w * size) / 2 : (-w * size) / 6, (-w * size) / 2 / aspect - 0.4, 1]}>
               {subParagraphs.map((paragraph, i) => (
                 <div key={i} tabIndex={index} style={{ margin: "0 0 1.5rem 0" }}>
                   {paragraph}

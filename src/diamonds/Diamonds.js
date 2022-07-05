@@ -43,7 +43,7 @@ export default function Diamonds() {
       dummy.updateMatrix()
       model.current.setMatrixAt(i, dummy.matrix)
       model.current.instanceMatrix.needsUpdate = true
-    })
+    }) 
 
     gl.autoClear = false
     camera.layers.set(0)

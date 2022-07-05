@@ -13,7 +13,7 @@ const state = {
       hideImage: false,
       image: "/photo-1515036551567-bf1198cccc35.jpeg",
       aspect: 1.51,
-      subParagraphs: ["Mostly it’s just me and heroin."]
+      subParagraphs: ["I spend my days at home with the air thick with regret."]
     },
     {
       offset: 2,
@@ -242,7 +242,7 @@ const state = {
     { offset: 0, color: "#000", height: 13 },
     { offset: 6.3, color: "#000", height: 20 }
   ],
-  clouds: [{ x: 0, offset: 1, pos: new Vector3(), scale: 14, factor: 4 }],
+  clouds: [{ x: 0, offset: 0, pos: new Vector3(), scale: 5, factor: 1 }],
   diamonds: [
     { x: 0, offset: 0.15, pos: new Vector3(), scale: 14, factor: 4 },
     { x: 2, offset: 1.1, pos: new Vector3(), scale: 1.8, factor: 2.1 },
